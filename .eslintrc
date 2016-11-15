@@ -1,0 +1,10 @@
+extends: "eslint:recommended"
+rules: {
+  "quotes": [2, "single"],
+  "comma-dangle": [1, "always-multiline"],
+  "no-console": 0,
+  "no-spaced-func": 2,
+  "no-trailing-spaces": 2,
+  "space-in-parens": [2, "never"],
+  "eqeqeq": 2
+}
