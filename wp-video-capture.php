@@ -3,7 +3,7 @@
  * Plugin Name: Video Recorder
  * Plugin URI: http://vidrack.com
  * Description: Add a video camera to your website!
- * Version: 1.7.51a
+ * Version: 1.7.51b
  * Author: Vidrack.com
  * Author URI: http://vidrack.com
  * License: GPLv2 or later
@@ -450,7 +450,7 @@ if ( class_exists( 'WP_Video_Capture' ) ) {
 		 */
 		function register_resource_video_page() {
 			global $post;
-			if ( 'vidrack_video' === $post->post_type ) {
+			if ( is_object($post) && 'vidrack_video' === $post->post_type ) {
 				wp_enqueue_script( 'download_video', plugin_dir_url( __FILE__ ) . 'js/download_video.js' );
 				wp_localize_script(
 					'download_video',
